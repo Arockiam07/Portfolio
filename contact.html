@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Kevin's Personal Portfolio - Creative Developer & Designer" />
+    <meta name="author" content="Kevin Arockiam" />
+    <title>Kevin's Contact </title>
+    
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link href="css/styles.css" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #8338ec;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --primary: #6c63ff;
+            --primary-dark: #564fcc;
+            --secondary: #ff6584;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gradient-primary-secondary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+             --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar with Glass Morphism Effect */
+        .navbar {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 15px 0;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--gradient-primary-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            margin: 0 8px;
+            color: var(--dark-color);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: var(--gradient-primary-secondary);
+            transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 3px;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+        
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+        
+        .btn-gradient {
+            background: var(--gradient);
+            border: none;
+            color: white;
+            background-size: 200% auto;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
+        }
+        
+        .feature {
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background: var(--gradient) !important;
+            box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .rounded-4 {
+            border-radius: 1.5rem !important;
+        }
+        
+        .contact-section {
+            background: url('https://assets.codepen.io/1462889/contact-bg.svg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .form-control {
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            height: auto;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(108, 99, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .floating-label {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .floating-label label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: #6c757d;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: white;
+            padding: 0 0.5rem;
+        }
+        
+        .floating-label input:focus + label,
+        .floating-label input:not(:placeholder-shown) + label,
+        .floating-label textarea:focus + label,
+        .floating-label textarea:not(:placeholder-shown) + label {
+            top: -0.5rem;
+            left: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
+        
+        .floating-label input, .floating-label textarea {
+            padding: 1.2rem 1rem 0.8rem;
+        }
+        
+        .floating-label textarea {
+            min-height: 120px;
+        }
+        
+        /* Particle animation background */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(108, 99, 255, 0.2);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Floating animation */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        /* Pulse animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 4s ease infinite;
+        }
+        
+       
+        
+        /* Success message animation */
+        .success-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+            max-width: 400px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+        
+        .success-message i {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 0.8s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column">
+    <!-- Particles Background -->
+    <div class="particles" id="particles-js"></div>
+    
+    <main class="flex-shrink-0">
+        <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Kevin's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        
+        <!-- Page content-->
+        <section class="py-5 contact-section">
+            <div class="container px-5 py-5">
+                <!-- Contact form-->
+                <div class="bg-light rounded-4 py-5 px-4 px-md-5 shadow-lg" data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-center mb-5">
+                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 floating">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <h1 class="fw-bolder display-5">Get in touch</h1>
+                        <p class="lead fw-normal text-muted mb-0">Let's create something amazing together!</p>
+                    </div>
+                    
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <form id="contactForm">
+                                <!-- Name input-->
+                                <div class="floating-label">
+                                    <input class="form-control" id="name" type="text" placeholder=" " required />
+                                    <label for="name">Full name</label>
+                                </div>
+                                
+                                <!-- Email input-->
+                                <div class="floating-label">
+                                    <input class="form-control" id="email" type="email" placeholder=" " required />
+                                    <label for="email">Email address</label>
+                                </div>
+                                
+                                <!-- Phone number input-->
+                                <div class="floating-label">
+                                    <input class="form-control" id="number" type="tel" placeholder=" " required />
+                                    <label for="number">Phone number</label>
+                                </div>
+                                
+                                <!-- Message input-->
+                                <div class="floating-label">
+                                    <textarea class="form-control" id="message" placeholder=" " required></textarea>
+                                    <label for="message">Your message</label>
+                                </div>
+                                
+                                <!-- Honeypot Spam Protection -->
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                
+                                <!-- Submit Button-->
+                                <div class="d-grid mt-4">
+                                    <button class="btn btn-primary btn-lg btn-gradient" id="submitButton" type="button" onclick="sendemail()">
+                                        <span class="submit-text">Send Message</span>
+                                        <span class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Success Message Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="success-message" id="successMessage">
+        <i class="bi bi-check-circle-fill"></i>
+        <h3 class="text-primary mb-3">Message Sent!</h3>
+        <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+        <button class="btn btn-primary mt-3" onclick="closeSuccessMessage()">Close</button>
+    </div>
+    
+    <!-- Footer-->
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0">
+                        Developed with <i class="bi bi-heart-fill text-danger"></i> by Kevin Arockiam
+                    </div>
+                </div>
+                <div class="col-auto">
+                   <a href="https://x.com/KevinArockiam" class="text-dark"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/kevin-arockiam-a90795244/" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/Arockiam07" class="text-dark"><i class="bi bi-github"></i></a>
+                        <a href="https://www.instagram.com/kevin._.arockiam/" class="text-dark"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("mzyThU5X2X24eCA72");
+        })();
+    </script>
+    
+    <!-- Core theme JS-->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out-quad'
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 30,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#6c63ff"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 10,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#6c63ff",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+        
+        // Email sending function with animations
+        function sendemail() {
+            const email = document.getElementById("email").value;
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+            const number = document.getElementById("number").value;
+            
+            // Validate form
+            if (!email || !name || !message || !number) {
+                alert("Please fill in all fields");
+                return;
+            }
+            
+            // Show loading state
+            const submitButton = document.getElementById("submitButton");
+            const submitText = submitButton.querySelector(".submit-text");
+            const spinner = submitButton.querySelector(".spinner-border");
+            
+            submitText.textContent = "Sending...";
+            spinner.classList.remove("d-none");
+            submitButton.disabled = true;
+            
+            var templateParams = {
+                email: email,
+                to_name: "Kevin",
+                from_name: name,
+                message: message,
+                phone: number
+            };
+            
+            emailjs.send('service_xkzw54p', 'template_0dc7hft', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Reset form
+                    document.getElementById("contactForm").reset();
+                    
+                    // Show success message
+                    document.getElementById("overlay").style.display = "block";
+                    document.getElementById("successMessage").style.display = "block";
+                    
+                    // Reset button
+                    submitText.textContent = "Message Sent!";
+                    setTimeout(() => {
+                        submitText.textContent = "Send Message";
+                        spinner.classList.add("d-none");
+                        submitButton.disabled = false;
+                    }, 3000);
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    alert("Failed to send message. Please try again later.");
+                    
+                    // Reset button
+                    submitText.textContent = "Try Again";
+                    spinner.classList.add("d-none");
+                    submitButton.disabled = false;
+                });
+        }
+        
+        function closeSuccessMessage() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("successMessage").style.display = "none";
+        }
+        
+        // Disable right click
+        window.addEventListener("contextmenu", (e) => e.preventDefault());
+        window.addEventListener("keydown", (e) => {
+            if (e.keyCode == 123) e.preventDefault();
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
+        });
+    </script>
+</body>
+</html>
